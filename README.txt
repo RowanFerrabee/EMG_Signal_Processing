@@ -1,0 +1,7 @@
+# EMG Signal Processing
+
+The following project is a python module used to process signals retrieved from EMG sensors. The goal of this project is to be able to predict the state of the hand (pinch grip, round grip, rest, ...) using only raw forearm EMG data. The workflow of the main program is to preprocess large sets of raw data with associated hand-state information, then extract usable features from it, and use those features to train a classification algorithm to be able to predict the state of the hand using future raw EMG data. The classifier will the be able to be used either by reading the data from a file or perhaps by reading the EMG data directly from a data stream in real time.
+
+Currently the project is organized such that all of the program code is stored in the directry scripts/, our test data is stored in the directory data/, and the unit tests for our program code is stored in tests/. The test data is organized such that each row in every csv file corresponds to 8 EMG data samples from EMG sensors placed in 8 different locations on the forearm, as well as a label representing the true state of the hand, which is stored in the 9th column of the row.
+
+To ensure all required python modules are installed on your machine, simply open the Terminal, visit the directory this file is in, and run "make init".
